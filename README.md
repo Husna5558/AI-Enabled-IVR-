@@ -1,3 +1,9 @@
+I didn't get the azure phone number so i got with twilio 
+my twilio phone number is:(831) 999-2788
+the url is:https://demo.twilio.com/welcome/voice/
+
+
+
 # Conversational IVR Middleware (Demo)
 
 This project provides a minimal middleware API layer to connect legacy IVR flows (Voice/TwiML) to a Conversational AI backend (ACS/BAP). It includes a Twilio webhook interface and a mock ACS endpoint for local testing.
@@ -78,3 +84,4 @@ Call your Twilio number. The middleware will start a speech gather and forward r
 - Say "balance" → mock will reply with an account balance and end the call.
 
 Enjoy! If you want, I can extend this to translate VXML scripts to conversational flows, add WebSocket/SSE for real-time data, or wire a real ACS integration.
+
