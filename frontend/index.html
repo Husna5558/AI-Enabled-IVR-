@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conversational IVR — Demo Frontend</title>
+  <style>
+    body{font-family:Segoe UI, Roboto, Arial; padding:20px; max-width:900px;margin:auto}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .card{border:1px solid #ddd;padding:12px;border-radius:6px;margin-top:12px}
+    label{display:block;margin-top:8px}
+    input[type=text],textarea,select{width:100%;padding:8px;margin-top:6px;border:1px solid #ccc;border-radius:4px}
+    button{padding:8px 12px;margin-top:8px;border-radius:4px;border:0;background:#0063b1;color:white}
+    pre{background:#f6f8fa;padding:10px;border-radius:6px;overflow:auto}
+    .row{display:flex;gap:12px}
+    .col{flex:1}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Conversational IVR — Demo Frontend (HTML)</h1>
+    <div>
+      Backend: <input id="backendUrl" type="text" value="http://127.0.0.1:8000" style="width:220px" />
+    </div>
+  </header>
+
+  <section class="card">
+    <h3>Flows</h3>
+    <button id="loadFlowsBtn">Load flows</button>
+    <div id="flowsList"></div>
+  </section>
+
+  <section class="card">
+    <h3>Simulate Conversation</h3>
+    <label>Session ID (optional)</label>
+    <input id="sessionId" type="text" placeholder="leave blank to auto-generate" />
+
+    <label>User input (text)</label>
+    <input id="userInput" type="text" />
+
+    <button id="sendWebhookBtn">Send to /vxml/webhook</button>
+
+    <h4>Response</h4>
+    <pre id="webhookResp">(no response yet)</pre>
+  </section>
+
+  <section class="card">
+    <h3>NLU Playground</h3>
+    <label>Text to analyze</label>
+    <input id="nluText" type="text" />
+    <button id="nluBtn">Analyze NLU</button>
+    <pre id="nluResp">(no response yet)</pre>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
